@@ -168,9 +168,9 @@ main()
       script="#($current_dir/network_ping.sh)"
     fi
 
-    if [ $plugin = "ha-weather" ]; then
-      IFS=' ' read -r -a colors <<< $(get_tmux_option "@dracula-gpu-usage-colors" "light_purple dark_gray")
-      script="#($current_dir/ha_weather.sh)"
+    if [ $plugin = "ha-data" ]; then
+      IFS=' ' read -r -a colors <<< $(get_tmux_option "@dracula-gpu-usage-colors" "orange dark_gray")
+      script="#($current_dir/ha_data.sh)"
     fi
 
     if [ $plugin = "weather" ]; then
