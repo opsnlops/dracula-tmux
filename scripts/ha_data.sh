@@ -8,7 +8,7 @@ get_data()
     power=$(curl -s -H "Authorization: Bearer ${HA_TOKEN}" https://${HA_HOSTNAME}/api/states/sensor.aprils_nest_energy_monitor_electric_consumption_w | jq -r .state)
     wind=$(curl -s -H "Authorization: Bearer ${HA_TOKEN}" https://${HA_HOSTNAME}/api/states/sensor.wind_speed_avg | jq -r .state)
     temperature=$(curl -s -H "Authorization: Bearer ${HA_TOKEN}" https://${HA_HOSTNAME}/api/states/sensor.outside_temperature  | jq -r .state)
-    printf "%.1f°F  💨 %.1fmph  ⚡️ %.1fw" "$temperature" "$wind" "$power"
+    printf "%.1f°F %.1fmph %.1fw" "$temperature" "$wind" "$power"
 }
 
 
