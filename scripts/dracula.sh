@@ -169,7 +169,7 @@ main()
     fi
 
     if [ $plugin = "ha-weather" ]; then
-      IFS=' ' read -r -a colors <<< $(get_tmux_option "@dracula-gpu-usage-colors" "pink dark_gray")
+      IFS=' ' read -r -a colors <<< $(get_tmux_option "@dracula-gpu-usage-colors" "light_purple dark_gray")
       script="#($current_dir/ha_weather.sh)"
     fi
 
